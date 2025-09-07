@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+const products = [
+  { id: 1, name: "Black Shirt", image: "/product1black.png", price: "$50" },
+  { id: 2, name: "White Shirt", image: "/product2white.png", price: "$55" },
+  // Add more products as you upload them
+];
+
 export default function Shop() {
   return (
     <main className="min-h-screen bg-gray-50 p-8">
