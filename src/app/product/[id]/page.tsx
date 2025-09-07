@@ -1,15 +1,16 @@
-// src/app/product/[id]/page.tsx
 import Image from "next/image";
-import { useParams } from "next/navigation";
 
 const productData: Record<string, { name: string; price: string; image: string }> = {
   product1black: { name: "Black Shirt", price: "$50", image: "/product1black.png" },
   product2white: { name: "White Shirt", price: "$50", image: "/product2white.png" },
 };
 
-export default function ProductPage() {
-  const { id } = useParams();
-  const product = productData[id!];
+interface ProductPageProps {
+  params: { id: string };
+}
+
+export default function ProductPage({ params }: ProductPageProps) {
+  const product = productData[params.id];
 
   if (!product) return <p className="text-center mt-20 text-white">Product not found</p>;
 
