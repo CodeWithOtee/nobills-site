@@ -4,8 +4,8 @@ import { useParams } from "next/navigation";
 const products = [
   { id: "product1black", name: "Black Shirt", price: "$50", image: "/product1black.png" },
   { id: "Product2white", name: "White Shirt", price: "$50", image: "/product2white.png" },
-  { id: "product3red", name: "Red Shirt", price: "$50", image: "/product3red.png" },
-  { id: "Product4blue", name: "Blue Shirt", price: "$50", image: "/product4blue.png" },
+  { id: "product1black", name: "Black Shirt", price: "$50", image: "/product1black.png" },
+  { id: "Product2white", name: "White Shirt", price: "$50", image: "/product2white.png" },
 ];
 
 export default function ProductPage() {
