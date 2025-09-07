@@ -22,7 +22,7 @@ export default function ProductPage() {
         href="/shop"
         className="text-white mb-6 underline hover:text-gray-200"
       >
-        ← Back to Catalogue
+        ← Back to CATALOGUE
       </Link>
       <h1 className="text-4xl font-bold mb-6 text-white">{product.name}</h1>
       <Image
