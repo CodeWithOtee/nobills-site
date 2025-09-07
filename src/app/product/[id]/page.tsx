@@ -1,39 +1,24 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useParams } from "next/navigation";
 
 const products = [
-  { id: "1", name: "Black Shirt", image: "/product1black.png", price: "$50" },
-  { id: "2", name: "White Shirt", image: "/Product2white.png", price: "$55" },
-  { id: "3", name: "Black Shirt 2", image: "/product1black.png", price: "$60" },
-  { id: "4", name: "White Shirt 2", image: "/Product2white.png", price: "$65" },
+  { id: "product1black", name: "Black Shirt", price: "$50", image: "/product1black.png" },
+  { id: "Product2white", name: "White Shirt", price: "$50", image: "/product2white.png" },
+  { id: "product3red", name: "Red Shirt", price: "$50", image: "/product3red.png" },
+  { id: "Product4blue", name: "Blue Shirt", price: "$50", image: "/product4blue.png" },
 ];
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const product = products.find((p) => p.id === params.id);
+export default function ProductPage() {
+  const params = useParams();
+  const product = products.find(p => p.id === params.id);
 
-  if (!product)
-    return <p className="p-8 text-center text-white">Product not found.</p>;
+  if (!product) return <div className="text-center mt-20">Product not found</div>;
 
   return (
-    <main className="min-h-screen bg-orange-400 flex flex-col items-center justify-center p-8">
-      <Link
-        href="/shop"
-        className="text-white mb-6 underline hover:text-gray-200"
-      >
-        ← Back to CATALOGUE
-      </Link>
-      <h1 className="text-4xl font-bold mb-6 text-white">{product.name}</h1>
-      <Image
-        src={product.image}
-        alt={product.name}
-        width={600}
-        height={600}
-        className="rounded-xl shadow-lg mb-6"
-      />
-      <p className="text-white text-2xl mb-6">{product.price}</p>
-      <button className="bg-white text-orange-500 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition">
-        Add to Cart
-      </button>
-    </main>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-orange-500 p-8">
+      <h1 className="text-4xl font-bold mb-8">{product.name}</h1>
+      <Image src={product.image} alt={product.name} width={400} height={400} />
+      <p className="text-2xl mt-4">{product.price}</p>
+    </div>
   );
 }
