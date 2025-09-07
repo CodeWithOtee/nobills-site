@@ -7,8 +7,8 @@ export default function Home() {
         <Image
           src="/nobillspnglogo.png" // make sure this matches your file name
           alt="NOBILLS Logo"
-          width={600}  // bigger width
-          height={600} // bigger height
+          width={800}  // bigger width
+          height={800} // bigger height
           priority
         />
       </div>
