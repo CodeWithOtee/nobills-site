@@ -1,4 +1,3 @@
-import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,8 +8,7 @@ const products = [
   { id: "4", name: "White Shirt 2", image: "/Product2white.png", price: "$65" },
 ];
 
-export default function ProductPage() {
-  const params = useParams();
+export default function ProductPage({ params }: { params: { id: string } }) {
   const product = products.find((p) => p.id === params.id);
 
   if (!product)
