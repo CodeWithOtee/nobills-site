@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const products = [
   { id: 1, name: "Black Shirt", image: "/product1black.png", price: "$50" },
-  { id: 2, name: "White Shirt", image: "/product2white.png", price: "$55" },
+  { id: 2, name: "White Shirt", image: "/Product2white.png", price: "$55" },
   { id: 3, name: "Black Shirt 2", image: "/product1black.png", price: "$60" },
   { id: 4, name: "White Shirt 2", image: "/product2white.png", price: "$65" },
 ];
