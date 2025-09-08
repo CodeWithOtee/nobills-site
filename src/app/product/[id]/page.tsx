@@ -1,4 +1,4 @@
-// src/app/product/[id]/page.tsx
+
 import Image from "next/image";
 
 const productData: Record<string, { name: string; price: string; image: string }> = {
