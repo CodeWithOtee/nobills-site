@@ -7,11 +7,7 @@ const productData: Record<string, { name: string; price: string; image: string }
   // Add more products if needed, matching the catalogue
 };
 
-interface ProductPageProps {
-  params: { id: string };
-}
-
-export default function ProductPage({ params }: ProductPageProps) {
+export default function Page({ params }: { params: { id: string } }) {
   const product = productData[params.id];
 
   if (!product) {
