@@ -2,8 +2,10 @@ import Image from "next/image";
 import styles from "./RotatingLogoRing.module.css";
 
 const NUM_ELEMENTS = 12;
-const RADIUS = 180; // px (inner ring)
-const OUTER_RADIUS = 270; // px (outer ring)
+const RING_SPACING = 90; // px (distance between rings)
+const CENTER_RADIUS = 0; // px (center is at the center)
+const INNER_RADIUS = 135; // px (distance from center to inner ring)
+const OUTER_RADIUS = INNER_RADIUS + RING_SPACING; // px (distance from center to outer ring)
 const logoSrc = "/nobillspnglogo.png";
 
 export default function RotatingLogoRing({ size = 420 }: { size?: number }) {
@@ -31,8 +33,8 @@ export default function RotatingLogoRing({ size = 420 }: { size?: number }) {
       <div className={styles.ring} style={{ width: size, height: size }}>
         {elements.map((_, i) => {
           const angle = (i / NUM_ELEMENTS) * 2 * Math.PI;
-          const x = Math.cos(angle) * RADIUS + size / 2 - 40;
-          const y = Math.sin(angle) * RADIUS + size / 2 - 40;
+          const x = Math.cos(angle) * INNER_RADIUS + size / 2 - 40;
+          const y = Math.sin(angle) * INNER_RADIUS + size / 2 - 40;
           return (
             <div
               key={i}
