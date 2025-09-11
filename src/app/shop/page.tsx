@@ -4,9 +4,7 @@ import Link from "next/link";
 
 const products = [
   { id: "product1black", name: "Black Shirt", price: "$50", image: "/product1black.png" },
-  { id: "product2white", name: "White Shirt", price: "$50", image: "/product2white.png.png" },
-  { id: "product1black", name: "Black Shirt", price: "$50", image: "/product1black.png" },
-  { id: "product2white", name: "White Shirt", price: "$50", image: "/product2white.png.png" },
+  { id: "product2white", name: "White Shirt", price: "$50", image: "/product2white.png" },
 ];
 
 export default function Catalogue() {

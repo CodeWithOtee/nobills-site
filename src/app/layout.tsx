@@ -44,7 +44,7 @@ function Footer() {
     <footer className="w-full bg-black text-white flex flex-col items-center py-12 px-4 border-t border-neutral-800">
       <div className="flex flex-col items-center w-full max-w-[var(--container)]">
         <Image
-          src="/nobills/threeheadlogo.png"
+          src="/nobillspnglogo.png"
           alt="NOBILLS three-head logo"
           width={160}
           height={60}

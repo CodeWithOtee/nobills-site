@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const productData: Record<string, { name: string; price: string; image: string }> = {
   product1black: { name: "Black Shirt", price: "$50", image: "/product1black.png" },
-  product2white: { name: "White Shirt", price: "$50", image: "/product2white.png.png" },
+  product2white: { name: "White Shirt", price: "$50", image: "/product2white.png" },
   // Add more products if needed, matching the catalogue
 };
 
