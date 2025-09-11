@@ -17,7 +17,7 @@ export default function Home() {
             left: '0',
             right: '0',
             // Shift left on mobile
-            transform: 'translateX(0%)',
+            transform: 'translateX(-7vw)',
           }}
         >
           <RotatingLogoRing />
