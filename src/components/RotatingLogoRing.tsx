@@ -18,15 +18,13 @@ function getRadii(size: number) {
   return { center, inner, outer };
 }
 
-export default function RotatingLogoRing({ size }: { size?: number }) {
-  // Always use 420px for desktop/tablet, 90vw for mobile (max 420px)
+export default function RotatingLogoRing() {
+  // Use 90vw (max 420px) for mobile, 420px for desktop/tablet
   let ringSize = 420;
   if (typeof window !== "undefined") {
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
     if (vw < 600) ringSize = Math.min(vw * 0.9, 420);
     else ringSize = 420;
-  } else if (size) {
-    ringSize = size;
   }
   const elements = Array.from({ length: NUM_ELEMENTS });
   const { center: CENTER_RADIUS, inner: INNER_RADIUS, outer: OUTER_RADIUS } = getRadii(ringSize);

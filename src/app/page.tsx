@@ -5,11 +5,12 @@ import RotatingLogoRing from "@/components/RotatingLogoRing";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-black text-white">
-      <section className="flex flex-col items-center justify-center w-full h-screen">
+      <section className="flex flex-col items-center justify-center w-full min-h-screen" style={{ minHeight: '100dvh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div
-          className="w-[clamp(260px,40vw,420px)] h-[clamp(260px,40vw,420px)] flex items-center justify-center"
+          className="flex items-center justify-center"
+          style={{ width: 'min(90vw,420px)', height: 'min(90vw,420px)', maxWidth: 420, maxHeight: 420 }}
         >
-          <RotatingLogoRing size={420} />
+          <RotatingLogoRing />
         </div>
         <span
           className="mt-8 text-[clamp(1.5rem,3vw,2.5rem)] font-serif font-semibold tracking-wide"
