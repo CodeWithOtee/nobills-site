@@ -1,31 +1,26 @@
 // src/app/page.tsx
-import Image from "next/image";
+"use client";
+import LayeredLogo from "@/components/LayeredLogo";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col bg-gray-100 relative">
-      {/* Top bar */}
-      <div className="w-full flex justify-between items-start px-8 pt-6 absolute top-0 left-0">
-        <span className="text-gray-700 text-[18px] font-semibold">Welcome Home</span>
-        <div className="flex gap-6">
-          <a href="/shop" className="text-gray-700 text-[18px] font-semibold hover:underline">Shop</a>
-          <a href="/cart" className="text-gray-700 text-[18px] font-semibold hover:underline">Cart</a>
-          <a href="/about" className="text-gray-700 text-[18px] font-semibold hover:underline">About Us</a>
+    <main className="min-h-screen flex flex-col items-center justify-center bg-black text-white">
+      <section className="flex flex-col items-center justify-center w-full h-screen">
+        <div
+          className="w-[clamp(260px,40vw,420px)] h-[clamp(260px,40vw,420px)] flex items-center justify-center"
+        >
+          <LayeredLogo size={420} />
         </div>
-      </div>
-      {/* Centered logo */}
-      <div className="flex flex-1 items-center justify-center w-full h-screen">
-        <div className="text-center">
-          <Image
-            src="/nobillspnglogo.png"
-            alt="NOBILLS logo"
-            width={320}
-            height={320}
-            priority
-          />
-          <p className="mt-6 text-sm text-gray-600">Welcome to NOBILLS</p>
-        </div>
-      </div>
+        <span
+          className="mt-8 text-[clamp(1.5rem,3vw,2.5rem)] font-serif font-semibold tracking-wide"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            letterSpacing: "0.04em",
+          }}
+        >
+          NOBILLS
+        </span>
+      </section>
     </main>
   );
 }
