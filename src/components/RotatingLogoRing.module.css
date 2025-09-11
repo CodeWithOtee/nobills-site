@@ -11,6 +11,15 @@
   inset: 0;
   animation: rotate 24s linear infinite;
 }
+.outerRing {
+  position: absolute;
+  inset: 0;
+  animation: rotate-ccw 36s linear infinite;
+}
+@keyframes rotate-ccw {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
 .ringItem {
   position: absolute;
   width: 80px;
