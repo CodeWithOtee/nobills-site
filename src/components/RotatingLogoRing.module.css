@@ -7,6 +7,22 @@
   justify-content: center;
   margin: 0 auto;
 }
+.responsiveStage {
+  /* On mobile, center and use 90vw */
+  width: 420px;
+  height: 420px;
+}
+@media (max-width: 600px) {
+  .responsiveStage {
+    width: 90vw;
+    height: 90vw;
+    max-width: 420px;
+    max-height: 420px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+}
 .ring {
   position: absolute;
   inset: 0;

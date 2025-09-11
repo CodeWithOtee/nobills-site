@@ -19,12 +19,11 @@ function getRadii(size: number) {
 }
 
 export default function RotatingLogoRing({ size }: { size?: number }) {
-  // Responsive size: use 100vw for mobile, clamp for larger screens
+  // Always use 420px for desktop/tablet, 90vw for mobile (max 420px)
   let ringSize = 420;
   if (typeof window !== "undefined") {
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    if (vw < 600) ringSize = Math.min(vw, 420);
-    else if (vw < 900) ringSize = 340;
+    if (vw < 600) ringSize = Math.min(vw * 0.9, 420);
     else ringSize = 420;
   } else if (size) {
     ringSize = size;
@@ -32,7 +31,7 @@ export default function RotatingLogoRing({ size }: { size?: number }) {
   const elements = Array.from({ length: NUM_ELEMENTS });
   const { center: CENTER_RADIUS, inner: INNER_RADIUS, outer: OUTER_RADIUS } = getRadii(ringSize);
   return (
-    <div className={styles.stage} style={{ width: '100vw', height: '100vw', maxWidth: 420, maxHeight: 420, overflow: 'hidden', margin: '0 auto', position: 'relative' }}>
+    <div className={styles.stage + " " + styles.responsiveStage} style={{ width: ringSize, height: ringSize, margin: '0 auto', position: 'relative', overflow: 'hidden' }}>
       {/* Outer ring (counterclockwise) */}
       <div className={styles.outerRing} style={{ width: ringSize, height: ringSize }}>
         {elements.map((_, i) => {
