@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./RotatingLogoRing.module.css";
 
 const NUM_ELEMENTS = 12;
-const RING_SPACING_RATIO = 0.3; // 30% of size
+const RING_SPACING_RATIO = 0.4; // 40% of size
 // Calculate radii based on size prop
 function getRadii(size: number) {
   const spacing = size * RING_SPACING_RATIO;
