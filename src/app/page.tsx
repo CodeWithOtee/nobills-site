@@ -8,7 +8,17 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center w-full min-h-screen" style={{ minHeight: '100dvh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div
           className="flex items-center justify-center mx-auto"
-          style={{ width: 'min(90vw,420px)', height: 'min(90vw,420px)', maxWidth: 420, maxHeight: 420 }}
+          style={{
+            width: 'min(90vw,420px)',
+            height: 'min(90vw,420px)',
+            maxWidth: 420,
+            maxHeight: 420,
+            position: 'relative',
+            left: '0',
+            right: '0',
+            // Shift left on mobile
+            transform: 'translateX(0%)',
+          }}
         >
           <RotatingLogoRing />
         </div>
@@ -18,8 +28,8 @@ export default function Home() {
             fontFamily: "'Cormorant Garamond', serif",
             letterSpacing: "0.04em",
             display: 'block',
-            marginTop: 'clamp(2.5rem,8vw,4.5rem)',
-            marginBottom: '1.5rem',
+            marginTop: 'clamp(3.5rem,12vw,6.5rem)',
+            marginBottom: '2.5rem',
             textAlign: 'center',
           }}
         >
