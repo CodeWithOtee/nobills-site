@@ -3,19 +3,19 @@ import styles from "./RotatingLogoRing.module.css";
 
 const NUM_ELEMENTS = 12;
 const RING_SPACING_RATIO = 0.3; // 30% of size
-const CENTER_RADIUS = 0;
 // Calculate radii based on size prop
 function getRadii(size: number) {
   const spacing = size * RING_SPACING_RATIO;
-  const inner = (size / 2) - spacing;
+  const center = 0;
+  const inner = center + spacing;
   const outer = inner + spacing;
-  return { inner, outer };
+  return { center, inner, outer };
 }
 const logoSrc = "/nobillspnglogo.png";
 
 export default function RotatingLogoRing({ size = 420 }: { size?: number }) {
   const elements = Array.from({ length: NUM_ELEMENTS });
-  const { inner: INNER_RADIUS, outer: OUTER_RADIUS } = getRadii(size);
+  const { center: CENTER_RADIUS, inner: INNER_RADIUS, outer: OUTER_RADIUS } = getRadii(size);
   return (
     <div className={styles.stage} style={{ width: size, height: size }}>
       {/* Outer ring (counterclockwise) */}
