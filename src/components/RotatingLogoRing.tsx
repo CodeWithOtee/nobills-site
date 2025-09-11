@@ -1,4 +1,5 @@
 
+
 import Image from "next/image";
 import styles from "./RotatingLogoRing.module.css";
 
@@ -17,24 +18,21 @@ function getRadii(size: number) {
   return { center, inner, outer };
 }
 
-function getResponsiveSize() {
+export default function RotatingLogoRing({ size }: { size?: number }) {
+  // Responsive size: use 100vw for mobile, clamp for larger screens
+  let ringSize = 420;
   if (typeof window !== "undefined") {
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    if (vw < 600) return 260;
-    if (vw < 900) return 340;
-    return 420;
+    if (vw < 600) ringSize = Math.min(vw, 420);
+    else if (vw < 900) ringSize = 340;
+    else ringSize = 420;
+  } else if (size) {
+    ringSize = size;
   }
-  return 420;
-}
-
-export default function RotatingLogoRing({ size }: { size?: number }) {
-  // Responsive size: clamp for SSR, dynamic for client
-  const defaultSize = typeof window === "undefined" ? 320 : getResponsiveSize();
-  const ringSize = size || defaultSize;
   const elements = Array.from({ length: NUM_ELEMENTS });
   const { center: CENTER_RADIUS, inner: INNER_RADIUS, outer: OUTER_RADIUS } = getRadii(ringSize);
   return (
-    <div className={styles.stage} style={{ width: ringSize, height: ringSize }}>
+    <div className={styles.stage} style={{ width: '100vw', height: '100vw', maxWidth: 420, maxHeight: 420, overflow: 'hidden', margin: '0 auto', position: 'relative' }}>
       {/* Outer ring (counterclockwise) */}
       <div className={styles.outerRing} style={{ width: ringSize, height: ringSize }}>
         {elements.map((_, i) => {
