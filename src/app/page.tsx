@@ -7,7 +7,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-center bg-black text-white">
       <section className="flex flex-col items-center justify-center w-full min-h-screen" style={{ minHeight: '100dvh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div
-          className="flex items-center justify-center mx-auto"
+          className="flex items-center justify-center mx-auto logo-ring-mobile-shift"
           style={{
             width: 'min(90vw,420px)',
             height: 'min(90vw,420px)',
@@ -16,8 +16,6 @@ export default function Home() {
             position: 'relative',
             left: '0',
             right: '0',
-            // Shift left on mobile
-            transform: 'translateX(-25%)',
           }}
         >
           <RotatingLogoRing />
