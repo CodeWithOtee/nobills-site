@@ -1,12 +1,3 @@
-/* Only shift the logo ring left on mobile for perfect centering */
-.logo-ring-mobile-shift {
-  transform: none;
-}
-@media (max-width: 600px) {
-  .logo-ring-mobile-shift {
-    transform: translateX(-30%);
-  }
-}
 .stage {
   position: relative;
   width: 100%;
