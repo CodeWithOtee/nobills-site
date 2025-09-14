@@ -77,8 +77,8 @@ export default function Footer() {
         {toast && (
           <div
             className={`fixed bottom-8 left-1/2 -translate-x-1/2 px-4 py-2 rounded shadow-lg text-sm z-50 ${toast.type === "success"
-                ? "bg-green-600 text-white"
-                : "bg-red-600 text-white"
+              ? "bg-green-600 text-white"
+              : "bg-red-600 text-white"
               }`}
             role="alert"
           >
