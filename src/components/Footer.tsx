@@ -87,6 +87,8 @@ export default function Footer() {
         )}
         {/* Quick Links */}
         <nav className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm font-serif tracking-wide">
+          <Link href="/" className="hover:underline underline-offset-4 transition">Home</Link>
+          <Link href="/shop" className="hover:underline underline-offset-4 transition">Shop</Link>
           <Link href="/about" className="hover:underline underline-offset-4 transition">About</Link>
           <Link href="/contact" className="hover:underline underline-offset-4 transition">Contact</Link>
           <a href="#" className="hover:underline underline-offset-4 transition">Follow</a>
