@@ -14,8 +14,7 @@ export default function Contact() {
         <div className="flex-1 min-w-[260px] max-w-md text-left font-serif" style={{ fontFamily: "Georgia, Times, 'Times New Roman', serif" }}>
           <h1 className="text-3xl md:text-4xl font-normal mb-8 tracking-wide">Contact</h1>
           <div className="mb-8">
-            <div className="text-2xl md:text-3xl mb-2">email@example.com</div>
-            <div className="text-2xl md:text-3xl mb-6 underline">(555) 555-5555</div>
+            <div className="text-2xl md:text-3xl">email@example.com</div>
           </div>
         </div>
         {/* Right: Contact form */}
