@@ -34,8 +34,8 @@ export default function Home() {
               NOBILLS
             </a>
           </Link>
-          <span className="block text-center text-base md:text-lg font-serif text-white/80 mb-10" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            NO LIMIT, LO LABEL
+          <span className="block text-center text-sm md:text-base font-serif text-white/80 mb-10" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            NO LIMIT, NO LABEL
           </span>
         </div>
       </section>
