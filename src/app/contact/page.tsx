@@ -16,11 +16,6 @@ export default function Contact() {
           <div className="mb-8">
             <div className="text-2xl md:text-3xl mb-2">email@example.com</div>
             <div className="text-2xl md:text-3xl mb-6 underline">(555) 555-5555</div>
-            <div className="flex gap-4 text-2xl">
-              <a href="#" aria-label="Instagram" className="hover:opacity-80 transition">&#xf16d;</a>
-              <a href="#" aria-label="Facebook" className="hover:opacity-80 transition">&#xf09a;</a>
-              <a href="#" aria-label="Twitter" className="hover:opacity-80 transition">&#xf099;</a>
-            </div>
           </div>
         </div>
         {/* Right: Contact form */}
