@@ -3,16 +3,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="w-full flex items-center justify-between px-4 py-4 bg-black text-white">
-      {/* Left: Logo */}
-      <div className="flex items-center">
-        <span
-          className="text-3xl md:text-4xl font-serif tracking-wide"
-          style={{ fontFamily: "Georgia, Times, 'Times New Roman', serif" }}
-        >
-          NOBILLS
-        </span>
-      </div>
+    <header className="w-full flex items-center justify-end px-4 py-4 bg-black text-white">
       {/* Right: Nav + Cart grouped tight */}
       <div className="flex items-center gap-4 md:gap-6">
         <nav className="hidden sm:flex items-center gap-4 md:gap-6 text-base md:text-lg font-serif">
