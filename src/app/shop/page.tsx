@@ -20,15 +20,15 @@ export default function Shop() {
         <hr className="border-t border-black/10 mb-12" />
         {/* Product grid */}
         <div className="flex flex-wrap justify-center gap-12">
-          <div className="flex flex-col items-center">
+          <Link href="/product/product1black" className="flex flex-col items-center cursor-pointer hover:opacity-80 transition">
             <Image src="/product1black.png" alt="Black Shirt" width={260} height={260} className="object-contain" />
-          </div>
-          <div className="flex flex-col items-center">
+          </Link>
+          <Link href="/product/product2white" className="flex flex-col items-center cursor-pointer hover:opacity-80 transition">
             <Image src="/product2white.png" alt="White Shirt" width={260} height={260} className="object-contain" />
-          </div>
-          <div className="flex flex-col items-center">
+          </Link>
+          <Link href="/product/blacknobillsboldtripple" className="flex flex-col items-center cursor-pointer hover:opacity-80 transition">
             <Image src="/blacknobillsboldtripple.png" alt="NOBILLS Bold Shirt" width={260} height={260} className="object-contain" />
-          </div>
+          </Link>
         </div>
       </section>
     </main>
