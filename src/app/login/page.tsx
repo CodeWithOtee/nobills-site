@@ -17,8 +17,8 @@ export default function Login() {
           <button type="submit" className="w-full px-4 py-3 bg-neutral-800 text-white rounded font-serif text-lg hover:opacity-80 transition">Sign in</button>
         </form>
         <div className="flex justify-between w-full mt-6 text-base">
-          <a href="#" className="text-black/70 hover:underline">Forgot Password?</a>
-          <a href="#" className="text-black/70 hover:underline">Create account</a>
+          <a href="#" className="text-white hover:underline">Forgot Password?</a>
+          <a href="#" className="text-white hover:underline">Create account</a>
         </div>
       </section>
     </main>
