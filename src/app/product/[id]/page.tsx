@@ -11,23 +11,18 @@ export default function Page({ params }: { params: { id: string } }) {
   const product = productData[params.id];
 
   if (!product) {
-    return <p className="text-center mt-20">Product not found</p>;
+    return <p className="text-center mt-20 font-serif text-lg">Product not found</p>;
   }
 
   return (
-    <div className="min-h-screen bg-orange-500 flex flex-col items-center justify-center p-8 relative">
-      {/* Top bar */}
-      <div className="w-full flex justify-end items-start px-8 pt-6 absolute top-0 left-0 z-10">
-        <div className="flex gap-6">
-          <a href="/shop" className="text-white text-[18px] font-semibold hover:underline">Shop</a>
-          <a href="/cart" className="text-white text-[18px] font-semibold hover:underline">Cart</a>
-          <a href="/about" className="text-white text-[18px] font-semibold hover:underline">About Us</a>
-        </div>
-      </div>
-      <h1 className="text-4xl font-bold text-white mb-8">{product.name}</h1>
-      <Image src={product.image} alt={product.name} width={400} height={400} />
-      <p className="mt-4 text-2xl font-semibold text-white">{product.price}</p>
-    </div>
+    <main className="min-h-[100svh] md:min-h-[100dvh] bg-white text-black font-serif flex items-center justify-center" style={{ fontFamily: "Georgia, Times, 'Times New Roman', serif" }}>
+      <section className="w-full max-w-2xl mx-auto px-4 py-16 flex flex-col items-center justify-center">
+        <Image src={product.image} alt={product.name} width={340} height={340} className="object-contain mb-8" />
+        <h1 className="text-3xl md:text-4xl font-normal text-center mb-4 tracking-wide">{product.name}</h1>
+        <p className="text-xl md:text-2xl text-center font-semibold mb-8">{product.price}</p>
+        {/* Add to Cart button or details can go here */}
+      </section>
+    </main>
   );
 }
 
