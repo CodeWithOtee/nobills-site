@@ -2,7 +2,7 @@ import RotatingLogoRing from "@/components/RotatingLogoRing";
 
 export default function Login() {
   return (
-    <main className="relative min-h-[100svh] md:min-h-[100dvh] bg-white flex items-center justify-center font-serif" style={{ fontFamily: "Georgia, Times, 'Times New Roman', serif" }}>
+    <main className="relative min-h-[100svh] md:min-h-[100dvh] bg-transparent flex items-center justify-center font-serif" style={{ fontFamily: "Georgia, Times, 'Times New Roman', serif" }}>
       {/* Logo ring background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10 z-0">
         <div style={{ width: 'min(90vw,420px)', height: 'min(90vw,420px)', maxWidth: 420, maxHeight: 420 }}>
